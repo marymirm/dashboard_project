@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
+}
 
 .container {
     display: grid;
     grid-template-rows: repeat(auto, 1fr);
     grid-template-columns: 250px 2fr 2fr 1fr;
+    background-color: #f7fee7;
 }
 
 .dashboard {
@@ -61,6 +62,8 @@ ul li {
 .top_bar {
     display: grid;
     grid-column: 2 / 5;
+    box-shadow: 2px 2px 5px 0px #d3d2d2;
+    background-color: white;
 }
 
 .nav-bar-icon path{
@@ -77,7 +80,7 @@ ul li {
 }
 
 
-.cat {
+.tangerine {
     width: 50px;
     height: 50px;
     object-fit: cover;
@@ -116,7 +119,7 @@ ul li {
     margin-bottom: 10px;
 }
 
-.cat-bigger {
+.tangerine-bigger {
     width: 70px;
     height: 70px;
     object-fit: cover;
@@ -159,37 +162,187 @@ ul li {
     display: flex;
     align-items: center;
     gap: 10px;
-
     font-family: Roboto, sans-serif;
-    font-weight: 550;
-    font-size: 88%;
+    font-weight: 500;
+    font-size: 89%;
+    box-shadow: 2px 2px 5px 0px #d3d2d2;
+}
 
-    box-shadow: 2px 2px 5px 0px #d3d2d2;;
+.card_container_title {
+    grid-row: 2 / 2;
+    grid-column: -4 / -4;
+    margin-left: 20px;
+    margin-top: 15px;
+    font-weight: 500;
 }
 
 .card_container {
-    background-color: #f7fee7;
-    display: block;
+
+    max-width: 700px;
+    min-width: fit-content;
+
+    margin-top: 40px;
+    margin-left: 20px;
+    column-gap: 5px;
     grid-row: 2 / 4;
     grid-column: 2 / 4;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 5px 0px #d3d2d2;
+    border-left: 6px solid;
+    border-color: #65a30d;
+    padding: 20px;
+    height: 150px;
 
+    width: 300px;
+    
+    background-color: white;
+    border-radius: 7px;
 }
 
 .title {
+    font-weight: 600;
+    font-size: 95%;
+}
 
+.content {
+    font-size: 80%;
+    color: rgba(0, 0, 0, 0.613);
+}
+
+.card_logo_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.card_logo path {
+    fill: black;
+}
+
+.announcements_container_title {
+    grid-row: 2 / 2;
+    grid-column: 4 / 4;
+    margin-top: 15px;
+    font-weight: 500;
+    margin-left: 20px;
 }
 
 .announcements {
     display: grid;
     grid-row: 2 / 3;
     grid-column: 4 / 5;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+.announcements_card {
+    display: grid;
+    align-self: center;
+    box-shadow: 2px 2px 5px 0px #d3d2d2;
+    padding: 20px;
+    height: 250px;
+    width: 200px;
+    background-color: white;
+    border-radius: 7px;
+}
+
+.announcements_title {
+    font-weight: 600;
+    font-size: 70%;
+}
+
+.announcements_content {
+    font-weight: 300;
+    font-size: 60%;
+    color: rgba(0, 0, 0, 0.579);
+}
+
+.trending_container_title {
+    grid-row: 3 / 3;
+    grid-column: 4 / 4;
+    margin-top: 5px;
+    font-weight: 500;
+    margin-left: 20px;
 }
 
 .trending {
     display: grid;
     grid-row: 3 / 3;
     grid-column: 4 / 5;
+    margin-left: 20px;
+    margin-right: 40px;
 }
+
+.trending_card {
+    display: grid;
+    grid-template-columns : 1fr 1fr;
+    grid-template-rows: auto;
+    align-self: center;
+    box-shadow: 2px 2px 5px 0px #d3d2d2;
+    padding: 20px;
+    height: 250px;
+    width: 200px;
+    background-color: white;
+    border-radius: 7px;
+    margin-top: 30px;
+}
+
+.first_column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.second_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.pineapple, .strawberry, .banana, .cherry {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: 70% 20%;
+    border-radius: 100%;
+    border: solid 2px;
+    border-color: #65a30d;
+    margin-top: 5px;
+}
+
+
+.pineapple_title, .strawberry_title, .banana_title, .cherry_title {
+    font-weight: 700;
+    font-size: 70%;
+    margin-top: 15px;
+}
+
+.pineapple_subtitle, .strawberry_subtitle, .banana_subtitle, .cherry_subtitle {
+    font-weight: 300;
+    font-size: 60%;
+    color: rgba(0, 0, 0, 0.579);
+}
+
+.strawberry_title {
+    margin-top: 30px;
+}
+
+.cherry_title {
+    margin-top: 25px;
+}
+
+.banana_title {
+    margin-top: 25px;
+}
+
